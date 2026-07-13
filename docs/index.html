@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pie Face Mobile OS — A radically lightweight, phone-native mobile operating system. Built from scratch with extreme minimalism.">
+    <meta property="og:title" content="Pie Face Mobile OS">
+    <meta property="og:description" content="A new mobile OS designed to be developed entirely on a phone. Minimalist. Hackable. AI-native.">
+    <title>Pie Face Mobile OS | Phone-Native Lightweight OS</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .font-display { font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; }
+        
+        .section-header {
+            font-size: clamp(2.75rem, 6vw, 4.25rem);
+            line-height: 0.92;
+            letter-spacing: -0.045em;
+        }
+        
+        .project-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                       box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
+                       0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #34d399, transparent);
+        }
+        
+        .metric {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200 antialiased">
+    <!-- NAV -->
+    <nav class="border-b border-zinc-800 bg-zinc-950/95 backdrop-blur-lg sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-4">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-white rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-mobile-screen-button text-zinc-950 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-2xl font-semibold tracking-tighter">Pie Face</div>
+                        <div class="text-[10px] text-zinc-500 -mt-1 tracking-[1.5px] font-mono">MOBILE OS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-8 text-sm">
+                <a href="#vision" class="hover:text-white transition-colors">Vision</a>
+                <a href="#principles" class="hover:text-white transition-colors">Principles</a>
+                <a href="#roadmap" class="hover:text-white transition-colors">Roadmap</a>
+                <a href="#ecosystem" class="hover:text-white transition-colors">Ecosystem</a>
+            </div>
+            
+            <div class="flex items-center gap-x-3">
+                <a href="https://github.com/fitzyracing1/Pieface" 
+                   target="_blank"
+                   class="px-5 py-2.5 bg-white text-zinc-950 rounded-3xl text-sm font-semibold flex items-center gap-x-2 hover:bg-zinc-100 transition-all">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="hidden sm:inline">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-8 pt-16 pb-20">
+        <div class="max-w-4xl">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-zinc-900 border border-zinc-800 text-xs tracking-[2px] mb-6">
+                <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
+                <span class="font-mono text-emerald-400">EARLY DEVELOPMENT</span>
+            </div>
+            
+            <h1 class="font-display text-[72px] md:text-[88px] leading-[0.88] tracking-[-4.5px] font-semibold">
+                Pie Face<br>Mobile OS
+            </h1>
+            
+            <p class="mt-6 max-w-2xl text-3xl md:text-4xl text-zinc-300 tracking-tight">
+                A radically lightweight mobile operating system.<br>
+                Built entirely on a phone.
+            </p>
+            
+            <div class="mt-10 flex flex-wrap gap-4">
+                <a href="#vision" 
+                   class="group px-9 py-4 bg-white text-lg font-semibold text-zinc-950 rounded-3xl flex items-center gap-x-3 hover:bg-zinc-100 active:scale-[0.985] transition-all">
+                    Explore the Vision 
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition"></i>
+                </a>
+                
+                <a href="https://github.com/fitzyracing1/Pieface" 
+                   target="_blank"
+                   class="px-9 py-4 border border-zinc-700 hover:bg-zinc-900 rounded-3xl flex items-center gap-x-3 text-lg transition-all">
+                    <i class="fa-brands fa-github text-xl"></i> 
+                    <span>View on GitHub</span>
+                </a>
+            </div>
+            
+            <div class="mt-8 text-sm text-zinc-500">
+                Part of the Earthenware Computer ecosystem • Phone-first development
+            </div>
+        </div>
+    </div>
+
+    <!-- VISION -->
+    <div id="vision" class="max-w-screen-2xl mx-auto px-6 md:px-8 py-16 border-t border-zinc-800">
+        <div class="grid lg:grid-cols-12 gap-x-16 gap-y-10">
+            <div class="lg:col-span-5">
+                <div class="sticky top-8">
+                    <div class="uppercase text-emerald-400 text-xs tracking-[2.5px] mb-3 font-mono">THE VISION</div>
+                    <h2 class="section-header font-semibold tracking-[-2.5px] leading-none">
+                        Reclaim the<br>
+                        full stack.
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7 text-lg text-zinc-300 space-y-6">
+                <p>
+                    Modern mobile operating systems have become extraordinarily complex. Pie Face takes the opposite path.
+                </p>
+                <p>
+                    It is a new mobile OS designed to be developed, understood, and extended by individuals or small teams — entirely on a phone using Termux and Linux environments.
+                </p>
+                <p class="text-emerald-400 font-medium">
+                    The goal is not feature parity with Android or iOS.<br>
+                    The goal is ownership, clarity, and speed of iteration.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DESIGN PRINCIPLES -->
+    <div id="principles" class="max-w-screen-2xl mx-auto px-6 md:px-8 py-16 border-t border-zinc-800 bg-zinc-900">
+        <div class="max-w-3xl mb-12">
+            <div class="text-emerald-400 text-xs tracking-[2.5px] font-mono mb-2">CORE PHILOSOPHY</div>
+            <h2 class="section-header font-semibold tracking-[-2px]">Design Principles</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 project-card">
+                <div class="w-12 h-12 bg-emerald-400/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-mobile text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Phone-Native</h3>
+                <p class="text-zinc-400 leading-relaxed">
+                    The entire OS — kernel exploration, userspace, build system, and debugging — is designed to be developed on the device itself.
+                </p>
+            </div>
+            
+            <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 project-card">
+                <div class="w-12 h-12 bg-emerald-400/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-compress text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">Extreme Minimalism</h3>
+                <p class="text-zinc-400 leading-relaxed">
+                    Target complexity and resource usage is roughly 1/10th that of mainstream mobile operating systems.
+                </p>
+            </div>
+            
+            <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 project-card">
+                <div class="w-12 h-12 bg-emerald-400/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-robot text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-2xl tracking-tight mb-3">AI-Native</h3>
+                <p class="text-zinc-400 leading-relaxed">
+                    Built from the ground up to support local LLMs, agents, and on-device intelligence as first-class citizens.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROADMAP -->
+    <div id="roadmap" class="max-w-screen-2xl mx-auto px-6 md:px-8 py-16 border-t border-zinc-800">
+        <div class="max-w-3xl mb-12">
+            <div class="text-emerald-400 text-xs tracking-[2.5px] font-mono mb-2">BUILD PATH</div>
+            <h2 class="section-header font-semibold tracking-[-2px]">Roadmap</h2>
+        </div>
+        
+        <div class="max-w-3xl space-y-8 text-lg">
+            <div class="flex gap-8">
+                <div class="font-mono text-emerald-400 w-9 shrink-0 pt-1">01</div>
+                <div>
+                    <div class="font-semibold">Core Architecture & Minimal Kernel</div>
+                    <div class="text-zinc-400 mt-1 text-base">Fundamental design decisions and early kernel exploration.</div>
+                </div>
+            </div>
+            <div class="flex gap-8">
+                <div class="font-mono text-emerald-400 w-9 shrink-0 pt-1">02</div>
+                <div>
+                    <div class="font-semibold">Basic Userspace & Init System</div>
+                    <div class="text-zinc-400 mt-1 text-base">Minimal but functional userspace foundation.</div>
+                </div>
+            </div>
+            <div class="flex gap-8">
+                <div class="font-mono text-emerald-400 w-9 shrink-0 pt-1">03</div>
+                <div>
+                    <div class="font-semibold">AI & Agent Runtime Integration</div>
+                    <div class="text-zinc-400 mt-1 text-base">First-class support for on-device intelligence and agents.</div>
+                </div>
+            </div>
+            <div class="flex gap-8">
+                <div class="font-mono text-emerald-400 w-9 shrink-0 pt-1">04</div>
+                <div>
+                    <div class="font-semibold">Developer Tooling & On-Device Builds</div>
+                    <div class="text-zinc-400 mt-1 text-base">Full self-hosting development experience.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ECOSYSTEM -->
+    <div id="ecosystem" class="max-w-screen-2xl mx-auto px-6 md:px-8 py-16 border-t border-zinc-800 bg-zinc-900">
+        <div class="max-w-3xl">
+            <div class="text-emerald-400 text-xs tracking-[2.5px] font-mono mb-3">PART OF A LARGER VISION</div>
+            <h2 class="section-header font-semibold tracking-[-2px] mb-8">Ecosystem Integration</h2>
+            
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                <div class="p-5 bg-zinc-950 border border-zinc-800 rounded-3xl">
+                    <div class="font-semibold flex items-center gap-x-2"><i class="fa-solid fa-tags text-emerald-400"></i> 3XB AI</div>
+                    <div class="text-xs text-zinc-500 mt-1">Entity intelligence and modeling layer running natively</div>
+                </div>
+                <div class="p-5 bg-zinc-950 border border-zinc-800 rounded-3xl">
+                    <div class="font-semibold flex items-center gap-x-2"><i class="fa-solid fa-shield-halved text-emerald-400"></i> Loopa</div>
+                    <div class="text-xs text-zinc-500 mt-1">Proximity safety and group awareness built into the OS</div>
+                </div>
+                <div class="p-5 bg-zinc-950 border border-zinc-800 rounded-3xl">
+                    <div class="font-semibold flex items-center gap-x-2"><i class="fa-solid fa-coins text-emerald-400"></i> Fire Fire Coin</div>
+                    <div class="text-xs text-zinc-500 mt-1">Native token and payment primitives</div>
+                </div>
+                <div class="p-5 bg-zinc-950 border border-zinc-800 rounded-3xl">
+                    <div class="font-semibold flex items-center gap-x-2"><i class="fa-solid fa-atom text-emerald-400"></i> Future Hardware</div>
+                    <div class="text-xs text-zinc-500 mt-1">Path toward quantum-adjacent and specialized acceleration</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="border-t border-zinc-800 py-16">
+        <div class="max-w-screen-2xl mx-auto px-6 md:px-8 text-center">
+            <h3 class="text-5xl tracking-[-2px] font-semibold">Own your OS.</h3>
+            <p class="mt-4 max-w-md mx-auto text-zinc-400">
+                Pie Face is an open invitation to builders who want to understand and control the full mobile stack.
+            </p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://github.com/fitzyracing1/Pieface" target="_blank"
+                   class="px-10 py-4 bg-white text-zinc-950 rounded-3xl font-semibold flex items-center justify-center gap-x-3 hover:bg-zinc-100 transition">
+                    Star on GitHub
+                </a>
+                <a href="https://x.com/fitzyracing1" target="_blank"
+                   class="px-10 py-4 border border-zinc-700 rounded-3xl font-medium flex items-center justify-center gap-x-3 hover:bg-zinc-900 transition">
+                    Follow progress on X
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-800 py-10 text-center text-xs text-zinc-500">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            Pie Face Mobile OS • Built on phone for builders who want ownership • fitzyracing1 • 2026<br>
+            <span class="text-emerald-400/70">Part of the Earthenware Computer ecosystem</span>
+        </div>
+    </footer>
+</body>
+</html>
