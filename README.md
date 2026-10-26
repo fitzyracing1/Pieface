@@ -99,3 +99,11 @@ Core components are released under the MIT License. Some experimental or hardwar
 **Pie Face Mobile OS** • Built on phone, for builders who want to own the full stack • fitzyracing1 • 2026
 
 *Part of the Earthenware Computer ecosystem — Tagging for everyone and everything.*
+
+## Plans
+
+This project is free, and its license stays as is. Support it through [GitHub Sponsors](https://github.com/sponsors/fitzyracing1):
+
+- **Free**: use the code, community support.
+- **Pro ($49/month)**: priority issues and support.
+- **Team ($199/month)**: priority support for your team plus early access.
